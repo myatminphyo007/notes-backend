@@ -9,9 +9,9 @@ dotenv.config();
 const PORT = process.env.PORT || 3000;
 
 const app = express();
-app.use(cors(
-    {origin: process.env.FRONTEND_URL || 'http://localhost:5173'} // Replace with your frontend URL}
-));
+app.use(cors({
+    origin: 'https://notes-frontend-lyart.vercel.app'
+}));
 
 app.use(express.json());                            // parses JSON body
 app.use(express.urlencoded({ extended: true }));
